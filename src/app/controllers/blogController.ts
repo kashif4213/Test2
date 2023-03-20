@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction, RequestHandler } from "express";
 
 const Blog = require('../models/blogModel');
-const { myAsyncHandler } = require('../asyncHandler');
+const { myAsyncHandler } = require('../../../asyncHandler');
 
 const getModels: RequestHandler = myAsyncHandler(async (req: Request, res: Response, next: NextFunction) => {
     let blogs = await Blog.find().skip(req.body.pageNumber * 5 ).limit(5).sort({title : 1})

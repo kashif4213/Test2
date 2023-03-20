@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction, RequestHandler } from "express"
 import { Schema } from "joi"
-let { myAsyncHandler } = require('../asyncHandler')
+let { myAsyncHandler } = require('../../../asyncHandler')
 const {addBlogValidationSchema, getBlogsValidationSchema} = require('../validations/blogValidationSchema')
 const Blog = require('../models/blogModel');
 

@@ -1,6 +1,6 @@
 import {Request, Response, NextFunction, RequestHandler } from "express"
 
-const { myAsyncHandler } = require("../asyncHandler")
+const { myAsyncHandler } = require("../../../asyncHandler")
 const User = require("../models/userModel")
 const { addUserValidationSchema, loginUserValidationSchema, logoutUserValidationSchema } = require("../validations/userValidationSchema")
 const jwt = require('jsonwebtoken')
